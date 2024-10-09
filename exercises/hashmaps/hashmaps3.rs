@@ -33,7 +33,7 @@ fn build_scores_table(results: String) -> HashMap<String, Team> {
         let team_2_name = v[1].to_string();
         let team_2_score: u8 = v[3].parse().unwrap();
 
-        let team_1 = &mut scores.entry(team_1_name).or_insert(Team {
+        let team_1 = scores.entry(team_1_name).or_insert(Team {
             goals_scored: 0,
             goals_conceded: 0,
         });
